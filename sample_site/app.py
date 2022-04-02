@@ -13,7 +13,7 @@ def index():
     # Render HTML with count variable
     return render_template("index.html", message=message)
 
-app.route("/", methods=["POST"])
+@app.route("/", methods=["POST"])
 def getvalue():
     message=request.form["message"]
     
@@ -21,5 +21,7 @@ def getvalue():
     f.write(str(message))
     f.close()
     
+    return render_template("index.html", message=message)
+
 if __name__ == "__main__":
     app.run()
