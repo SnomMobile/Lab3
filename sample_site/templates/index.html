@@ -22,10 +22,14 @@
 </style>
 
 <div>
+   
     <h1>Welcome!</h1><br>
-    <p>This site has been visited {{ count }} times.</p>
-    <form>
+   
+    <p>The most recent visitor says: {{ message }}</p>
+   
+    <form name="passdata" action "." method="post">
        <label for="message">Send your message to the next visitor:</label><br>
-       <input type="text" id="message" name="message"><br>
+       <input type="text" name="message"><br>
     </form>
+   
 </div>
